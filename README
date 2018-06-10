@@ -5,3 +5,14 @@ This repository contains tools used to achieve our master's thesis at Ecole Poly
 \simulator\ folder contains a java program simulating the behavior of CRP, our protocol for intradomain exchanges of interdomain routing information.
 
 Infos about these two tools can be found in their own README.
+
+
+AS configurations can be used by creating folders with the necessary information. Examples are given in folders 209, 1668, 5511 and 7911. To make a folder ready to use, it needs to contain four files :
+
+- topo : It describes the edges and vertices in the network. The first line says how many routers are in the network and each following line contain a link in the network. The counting of router IDs starts at 0.
+
+- prefixes : It describes the different prefixes announced in the network. On each line, the first number represents the border router on which the prefix will be advertised. To advertise the same prefix on another border router, see file "aspath".
+
+- aspath : Each line contains two router IDs and an integer value. For example, "X Y 5" means that prefixes associated to the border router X in the file 'prefixes' will be also advertised to Y with an AS-path length of 5. The opposite is also true. X is not necessarily different from Y.
+
+- route_reflectors : Contains the route reflectors used when desired with CRP. Each line contains the different route reflectors for one simulation. If multiple lines are written, each line will correspond to a different scenario.

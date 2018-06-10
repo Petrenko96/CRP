@@ -12,15 +12,15 @@ Print the size of the routing table of each router
 To run the first class:
 > java Main.GetPaths <TOPO\_FILE> <PREFIX\_FILE> <ASPATH\_FILE>
 
-		<TOPO\_FILE> : the file containing the topology
-		<PREFIX_FILE> : the file containing the prefixes to announce
-		<ASPATH\_FILE> : the file containing the AS path lengths for the prefixes
+	<TOPO\_FILE> : the file containing the topology
+	<PREFIX\_FILE> : the file containing the prefixes to announce
+	<ASPATH\_FILE> : the file containing the AS path lengths for the prefixes
 
 > java Main.RoutingTableSize <TOPO\_FILE> <PREFIX\_FILE> <ASPATH\_FILE>
 
-		<TOPO\_FILE> : the file containing the topology
-		<PREFIX_FILE> : the file containing the prefixes to announce
-		<ASPATH\_FILE> : the file containing the AS path lengths for the prefixes
+	<TOPO\_FILE> : the file containing the topology
+	<PREFIX\_FILE> : the file containing the prefixes to announce
+	<ASPATH\_FILE> : the file containing the AS path lengths for the prefixes
 
 ## Tests
 

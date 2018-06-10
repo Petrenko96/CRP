@@ -1,0 +1,7 @@
+This repository contains tools used to achieve our master's thesis at Ecole Polytechnique de Louvain (Université Catholique de Louvain) for the academic year 2017-2018.
+
+\CBGP\ folder contains python scripts to run a BGP solver called C-BGP
+
+\simulator\ folder contains a java program simulating the behavior of CRP, our protocol for intradomain exchanges of interdomain routing information.
+
+Infos about these two tools can be found in their own README.

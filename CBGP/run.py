@@ -35,6 +35,13 @@ if FM_RR:
         format_output(PATH, FM_RR=FM_RR, RR_list=RR_list)
         print(" done")
 else:
+    print("Handling route_reflectors "+line,end='')
+    print("... generating commands for C-BGP : ",end='')
     generate_cbgp_commands(PATH, FM_RR, lp_AS)
+    print(" done")
+    print("... running C-BGP : ",end='')
     run_cbgp(PATH)
+    print(" done")
+    print("... formatting output : ",end='')
     format_output(PATH, FM_RR=FM_RR)
+    print(" done")

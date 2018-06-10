@@ -1,11 +1,13 @@
 #!/bin/python
 from __future__ import print_function
-import sys, random
+import sys, random, os
 
 def generate_cbgp_commands(path, FM_RR, lp_AS, **kwargs):
     topo = open(path+"/topo", "r")
     prefixes = open(path+"/prefixes", "r")
     as_path_info = open(path+"/aspath", "r")
+    if not os.path.exists(path+"/cbgp_intermediate/"):
+        os.makedirs(path+"/cbgp_intermediate/")
     dstfile = open(path+"/cbgp_intermediate/commands_cbgp", "w")
     RR_list = kwargs.get('RR_list', None)
     

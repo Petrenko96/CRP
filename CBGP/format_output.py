@@ -1,6 +1,6 @@
 #!/bin/python
 from __future__ import print_function
-import sys
+import sys, os
 
 def format_output(path, **kwargs):
     FM_RR = kwargs.get('FM_RR', None)
@@ -8,6 +8,10 @@ def format_output(path, **kwargs):
     srcfile = open(PATH+"/cbgp_intermediate/output_cbgp","r")
     
     if FM_RR == 0:
+        if not os.path.exists(path+"/paths/fullmesh/"):
+            os.makedirs(path+"/paths/fullmesh/")
+        if not os.path.exists(path+"/rt_sizes/fullmesh/"):
+            os.makedirs(path+"/rt_sizes/fullmesh/")
         dstfile_stretch = open(PATH+"/paths/fullmesh/stretch-fullmesh.cbgp","w")
         dstfile_rib = open(PATH+"/rt_sizes/fullmesh/rt_sizes-fullmesh.cbgp","w")
     elif FM_RR == 1:
@@ -21,9 +25,17 @@ def format_output(path, **kwargs):
         name_stretch += ".cbgp"
         name_rib += ".cbgp"
         
+        if not os.path.exists(path+"/paths/rr/"):
+            os.makedirs(path+"/paths/rr/")
+        if not os.path.exists(path+"/rt_sizes/rr/"):
+            os.makedirs(path+"/rt_sizes/rr/")
         dstfile_stretch = open(PATH+"/paths/rr/"+name_stretch,"w")
         dstfile_rib = open(PATH+"/rt_sizes/rr/"+name_rib,"w")
     else:
+        if not os.path.exists(path+"/paths/output_stretch/"):
+            os.makedirs(path+"/paths/output_stretch/")
+        if not os.path.exists(path+"/rt_sizes/output_rib/"):
+            os.makedirs(path+"/rt_sizes/output_rib/")
         dstfile_stretch = open(PATH+"/paths/output_stretch","w")
         dstfile_rib = open(PATH+"/rt_sizes/output_rib","w")
         

@@ -6,12 +6,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
-import routing.Address;
 import routing.Prefix;
 import routing.Route.Priority;
-import routing.RoutingTable2;
 import solution.CRP;
-import topology.ShortestPath;
 
 public class Config {
 	
@@ -149,13 +146,4 @@ public class Config {
 		return newCRP(filename, root, false);
 	}
 	
-	public static void main(String args[]) {
-		Config conf = new Config("prefixes", "as_path.txt");
-		CRP crp = conf.newCRP("AS209", new int[] {11, 34});
-		
-		ShortestPath sp = new ShortestPath(crp, 21);
-		System.out.println(sp.path(11));
-		System.out.println(sp.path(34));
-		
-	}
 }

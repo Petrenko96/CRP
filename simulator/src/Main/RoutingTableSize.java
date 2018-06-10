@@ -1,14 +1,7 @@
 package Main;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
-
-import routing.Prefix;
-import routing.Route.Priority;
 import solution.CRP;
 
 public class RoutingTableSize {

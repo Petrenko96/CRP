@@ -20,15 +20,15 @@ The easiest way to run these scripts is to use "run.py".
 
 	<PATH> : name of the file containing the topology
 	<FM_RR> : 0 to use a full-mesh, 1 to use route reflection
-	<lp_AS> : 0 to vary local-pref attribute, 1 to vary AS-path attribute
+	<ASP_LP> : 0 to vary local-pref attribute, 1 to vary AS-path attribute
 
 However it is possible to run independently every part. Syntex is provided 
 
-> ./run.py <PATH> <FM_RR> <lp_AS>
+> ./run.py <PATH> <FM_RR> <ASP_LP>
 
     <PATH> : name of the folder containing the topology
     <FM_RR> : 0 to use a full-mesh, 1 to use route reflection
-    <lp_AS> : 0 to vary local-pref attribute, 1 to vary AS-path attribute
+    <ASP_LP> : 0 to vary local-pref attribute, 1 to vary AS-path attribute
 
 > ./CBGP.py <PATH>
 
